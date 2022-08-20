@@ -1,9 +1,14 @@
+import MyApps from "./pages/MyApps";
+import HomePage from "./pages/HomePage";
+import MyWork from "./pages/MyWork";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
-    <div className="app">
-      Hello Blog
-    </div>
+    <HomePage />
+    // <MyApps />
+    // <MyWork />
+    // <Blog />
   );
 }
 

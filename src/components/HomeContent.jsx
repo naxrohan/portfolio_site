@@ -1,4 +1,4 @@
-import { Avatar, Chip, Stack, styled, Typography } from '@mui/material'
+import { Avatar, Button, Chip, Stack, styled, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import CloudIcon from '@mui/icons-material/Cloud';
@@ -42,6 +42,8 @@ const HomeContent = () => {
           I’m a software engineer specializing in building web applications.
           Currently, I’m focused on building AWS based products at ?
         </Typography>
+
+        <Button variant="contained" sx={{ width: '150px' }}>My Work</Button>
       </MainText>
 
     </Box>
