@@ -1,42 +1,11 @@
-import { AndroidOutlined } from '@mui/icons-material';
-import InfoIcon from '@mui/icons-material/Info';
-import { Avatar, Box, Chip, IconButton, Paper, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 import {  Stack, styled } from '@mui/system';
 import React from 'react'
+import {theme} from '../theme'
+import AppIconItem from './AppIconItem';
 
-const MainBody = styled(Stack)(({}) => ({
+const MainBody = styled(Stack)(({theme}) => ({
   marginTop:'50px'
-}));
-
-const IconBoxHolder = styled(Paper)(({}) => ({
-  width:'300px',
-  height:'300px',
-  marginBottom:'15px',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems:'center',
-  flexDirection: 'column',
-  position: 'relative'
-}));
-
-const IconBoxOverlay = styled(Box)(({}) => ({
-    opacity: 0,
-    height: '100%',
-    width: '100%',
-    position: 'absolute',
-    top:0 ,
-    left: 0,
-    background: 'linear-gradient(0deg, rgba(218, 91, 0, 0.4), rgba(3, 215, 88, 0.3)), #ffffffaa',
-    backgroundSize:'cover',
-    zIndex: 3,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    transition: 'all 0.5s ease',
-    cursor: 'pointer',
-    '&:hover': {
-      opacity : 1
-    }
 }));
 
 const AppsListing = () => {
@@ -47,199 +16,39 @@ const AppsListing = () => {
       sx={{ borderLeft: "1px solid gray", height: '100vh', overflow: 'scroll' }}>
 
       <MainBody 
+        theme={theme}
         direction='row' 
         spacing={0} 
         justifyContent='space-evenly'
         flexWrap='wrap'>
 
-        <IconBoxHolder elevation={3}>
-            <IconBoxOverlay>
-              <IconButton>
-                <Chip avatar={<AndroidOutlined  />} label="Download" variant="filled" color="success" />
-              </IconButton>
-              <IconButton>
-                <Chip avatar={<InfoIcon color='primary' />} label="Info" variant="filled" color="info" />
-              </IconButton>
-            </IconBoxOverlay>
-          <img src={`/images/ic_birthday.png`}
-            alt="BirthDay Stickers"
-            loading="lazy"
-            height={250}/>
-            <Typography gutterBottom variant="h6" component="div">
-              WhatsApp BirthDay Stickers
-            </Typography>
-            
-        </IconBoxHolder>
+        <AppIconItem name="WhatsApp BirthDay Stickers" image={`/images/ic_birthday.png`} height={250} />
 
-         <IconBoxHolder elevation={3}>
-            <IconBoxOverlay>
-              <IconButton>
-                <Chip avatar={<AndroidOutlined  />} label="Download" variant="filled" color="success" />
-              </IconButton>
-              <IconButton>
-                <Chip avatar={<InfoIcon color='primary' />} label="Info" variant="filled" color="info" />
-              </IconButton>
-            </IconBoxOverlay>
-            <img src={`/images/ic_kjv.png`}
-            alt="Bible KJV"
-            loading="lazy"
-            height={280}/>
-            <Typography gutterBottom variant="h5" component="div">
-              Bible KJV
-            </Typography>
-        </IconBoxHolder>
+        <AppIconItem name="Bible KJV" image={`/images/ic_kjv.png`} height={280} />
+         
 
-        <IconBoxHolder elevation={3}>
-          <IconBoxOverlay>
-            <IconButton>
-              <Chip avatar={<AndroidOutlined />} label="Download" variant="filled" color="success" />
-            </IconButton>
-            <IconButton>
-              <Chip avatar={<InfoIcon color='primary' />} label="Info" variant="filled" color="info" />
-            </IconButton>
-          </IconBoxOverlay>
-          <img
-            src={`/images/ic_hindi.png`}
-            alt="Bible Hindi"
-            loading="lazy"
-            height={280} />
-          <Typography gutterBottom variant="h5" component="div">
-            Bible Hindi
-          </Typography>
-        </IconBoxHolder>
+        <AppIconItem name="Bible Hindi" image={`/images/ic_hindi.png`} height={280} />
+        
 
-        <IconBoxHolder elevation={3}>
-          <IconBoxOverlay>
-            <IconButton>
-              <Chip avatar={<AndroidOutlined />} label="Download" variant="filled" color="success" />
-            </IconButton>
-            <IconButton>
-              <Chip avatar={<InfoIcon color='primary' />} label="Info" variant="filled" color="info" />
-            </IconButton>
-          </IconBoxOverlay>
-          <img
-            src={`/images/ic_marathi.png`}
-            alt="Bible Marathi"
-            loading="lazy"
-            height={280} />
-          <Typography gutterBottom variant="h5" component="div">
-            Bible Marathi
-          </Typography>
-        </IconBoxHolder>
+        <AppIconItem name="Bible Marathi" image={`/images/ic_marathi.png`} height={280} />
+        
 
-        <IconBoxHolder elevation={3}>
-          <IconBoxOverlay>
-            <IconButton>
-              <Chip avatar={<AndroidOutlined />} label="Download" variant="filled" color="success" />
-            </IconButton>
-            <IconButton>
-              <Chip avatar={<InfoIcon color='primary' />} label="Info" variant="filled" color="info" />
-            </IconButton>
-          </IconBoxOverlay>
-          <img
-            src={`/images/ic_konkani.png`}
-            alt="Bible Konkani"
-            loading="lazy"
-            height={280} />
-          <Typography gutterBottom variant="h5" component="div">
-            Bible Konkani
-          </Typography>
-        </IconBoxHolder>
+        <AppIconItem name="Bible Konkani" image={`/images/ic_konkani.png`} height={280} />
+        
 
-        <IconBoxHolder elevation={3}>
-          <IconBoxOverlay>
-            <IconButton>
-              <Chip avatar={<AndroidOutlined />} label="Download" variant="filled" color="success" />
-            </IconButton>
-            <IconButton>
-              <Chip avatar={<InfoIcon color='primary' />} label="Info" variant="filled" color="info" />
-            </IconButton>
-          </IconBoxOverlay>
-          <img
-            src={`/images/ic_parable_english.png`}
-            alt="Parables English"
-            loading="lazy"
-            height={280} />
-          <Typography gutterBottom variant="h5" component="div">
-            Bible Parables English
-          </Typography>
-        </IconBoxHolder>
+        <AppIconItem name="Bible Parables English" image={`/images/ic_parable_english.png`} height={280} />
+        
 
-        <IconBoxHolder elevation={3}>
-          <IconBoxOverlay>
-            <IconButton>
-              <Chip avatar={<AndroidOutlined />} label="Download" variant="filled" color="success" />
-            </IconButton>
-            <IconButton>
-              <Chip avatar={<InfoIcon color='primary' />} label="Info" variant="filled" color="info" />
-            </IconButton>
-          </IconBoxOverlay>
-          <img
-            src={`/images/ic_parable_hindi.png`}
-            alt="Parables Hindi"
-            loading="lazy"
-            height={280} />
-          <Typography gutterBottom variant="h6" component="div">
-            येसु मसीह के दृष्टांत | Hindi
-          </Typography>
-        </IconBoxHolder>
+        <AppIconItem name="येसु मसीह के दृष्टांत | Hindi" image={`/images/ic_parable_hindi.png`} height={280} />
+        
 
-        <IconBoxHolder elevation={3}>
-          <IconBoxOverlay>
-            <IconButton>
-              <Chip avatar={<AndroidOutlined />} label="Download" variant="filled" color="success" />
-            </IconButton>
-            <IconButton>
-              <Chip avatar={<InfoIcon color='primary' />} label="Info" variant="filled" color="info" />
-            </IconButton>
-          </IconBoxOverlay>
-          <img
-            src={`/images/ic_parable_portuguese.png`}
-            alt="Parables Portuguese"
-            loading="lazy"
-            height={280} />
-          <Typography gutterBottom variant="h6" component="div">
-            Parábolas de Jesus | Portuguese
-          </Typography>
-        </IconBoxHolder>
+        <AppIconItem name=" Parábolas de Jesus | Portuguese" image={`/images/ic_parable_portuguese.png`} height={280} />
+        
 
-        <IconBoxHolder elevation={3}>
-          <IconBoxOverlay>
-            <IconButton>
-              <Chip avatar={<AndroidOutlined />} label="Download" variant="filled" color="success" />
-            </IconButton>
-            <IconButton>
-              <Chip avatar={<InfoIcon color='primary' />} label="Info" variant="filled" color="info" />
-            </IconButton>
-          </IconBoxOverlay>
-          <img
-            src={`/images/ic_parable_spanish.png`}
-            alt="Parables Spanish"
-            loading="lazy"
-            height={280} />
-          <Typography gutterBottom variant="h6" component="div">
-            Parábolas de Jesus | Español
-          </Typography>
-        </IconBoxHolder>
+        <AppIconItem name="Parábolas de Jesus | Español" image={`/images/ic_parable_spanish.png`} height={280} />
+        
 
-        <IconBoxHolder elevation={3}>
-          <IconBoxOverlay>
-            <IconButton>
-              <Chip avatar={<AndroidOutlined />} label="Download" variant="filled" color="success" />
-            </IconButton>
-            <IconButton>
-              <Chip avatar={<InfoIcon color='primary' />} label="Info" variant="filled" color="info" />
-            </IconButton>
-          </IconBoxOverlay>
-          <img
-            src={`/images/ic_worldproverbs.png`}
-            alt="World Proverbs"
-            loading="lazy"
-            height={280} />
-          <Typography gutterBottom variant="h5" component="div">
-            World Proverbs
-          </Typography>
-        </IconBoxHolder>
+        <AppIconItem name="World Proverbs" image={`/images/ic_worldproverbs.png`} height={280} />
 
       </MainBody>
       
