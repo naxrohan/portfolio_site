@@ -116,15 +116,6 @@ const Sidebar = () => {
           </ListItem>
           <Divider variant="inset" component="li" />
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <InfoIcon />
-              </ListItemIcon>
-              <ListItemText primary="About" />
-            </ListItemButton>
-          </ListItem>
-
         </List>
 
         <Stack
