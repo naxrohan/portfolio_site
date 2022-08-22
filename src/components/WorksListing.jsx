@@ -48,9 +48,9 @@ const WorksListing = () => {
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            <Button size="small" startIcon={<LanguageIcon />}>Goto Site</Button>
-            <Button size="small" startIcon={<CodeIcon />}>View Code</Button>
-            <Button size="small" startIcon={<InfoIcon />}>More Info</Button>
+            <Button size="small" startIcon={<LanguageIcon />} href={item.link} target="_blank">Goto Site</Button>
+            <Button size="small" startIcon={<CodeIcon />} href={item.repo} target="_blank">View Code</Button>
+            <Button size="small" startIcon={<InfoIcon />} href={`/my-work/${item.page}`}>More Info</Button>
           </CardActions>
         </Card>
         ))

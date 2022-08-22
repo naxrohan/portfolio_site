@@ -4,6 +4,7 @@ const WorksData = [
         image: "", 
         link: "https://shopsite1.herokuapp.com/", 
         page: "ecommerse-site", 
+        repo: "https://github.com/naxrohan/shopping",
         desc: "Ecommerse Site Cient & API (MERN Stack)",
         height: "280"
     },
@@ -12,6 +13,7 @@ const WorksData = [
         image: "", 
         link: "http://todosite2.herokuapp.com/", 
         page: "todo-site", 
+        repo: "https://github.com/naxrohan/todolist",
         desc: "ToDo Site Cient & API (keep.google clone)",
         height: "280"
     },
@@ -20,6 +22,7 @@ const WorksData = [
         image: "", 
         link: "http://empmng1.herokuapp.com/", 
         page: "employee-management", 
+        repo: "https://github.com/naxrohan/employee_management",
         desc: "Employee Management dashboard (Laravel/ReactJS)",
         height: "280"
     },
