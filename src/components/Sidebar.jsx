@@ -46,7 +46,7 @@ const Sidebar = () => {
           }}
           component="nav">
 
-          <ListItem disablePadding>
+          <ListItem key="12312312" disablePadding>
             <ListItemAvatar>
               <UserBox>
                 <Avatar alt="Rohan DSouza" src="https://avatars.githubusercontent.com/u/10266365?v=4" />
@@ -69,17 +69,17 @@ const Sidebar = () => {
 
           {PagesData.map((item) =>(
             <>
-              <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {item.image}
-                </ListItemIcon>
-                <Link to={item.page} style={{  textDecoration: 'none' }}>
-                  <ListItemText primary={item.title} />
-                </Link>
-              </ListItemButton>
-            </ListItem>
-            <Divider variant="inset" component="li" />
+              <ListItem key={item.id} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {item.image}
+                  </ListItemIcon>
+                  <Link to={item.page} style={{  textDecoration: 'none' }}>
+                    <ListItemText primary={item.title} />
+                  </Link>
+                </ListItemButton>
+              </ListItem>
+            <Divider key={item*2} variant="inset" component="li" />
             </>
           ))}
 

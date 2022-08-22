@@ -8,7 +8,6 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import PagesData from '../JsonData/PagesData'
@@ -68,8 +67,8 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {PagesData.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+              {PagesData.map((page, key) => (
+                <MenuItem key={key} onClick={handleCloseNavMenu}>
                     <Link to={page.page} style={{  textDecoration: 'none' }}>
                         <Typography textAlign="center">{page.title}</Typography>
                     </Link>
@@ -93,7 +92,7 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO-a
+            Rohan DSouza
           </Typography>
 
           <Box sx={{ flexGrow: 0 }}>

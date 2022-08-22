@@ -12,19 +12,16 @@ import {
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        
-        <Route path="/apps" element={<MyApps />} />
-        <Route path="/apps/:appName" element={<AppsPage />} />
-        
-        <Route path="/my-work" element={<MyWork />} />
-        <Route path="/my-work/:workName" element={<MyWork />} />
-        
-        <Route path="/blog" element={<Blog />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/apps" element={<MyApps />} />
+          <Route path="/apps/:appName" element={<AppsPage />} />
+          <Route path="/my-work" element={<MyWork />} />
+          <Route path="/my-work/:workName" element={<MyWork />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+      </Router>
   );
 }
 
