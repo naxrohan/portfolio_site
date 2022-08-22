@@ -1,7 +1,7 @@
 import React from 'react'
 import { AndroidOutlined } from '@mui/icons-material';
 import InfoIcon from '@mui/icons-material/Info';
-import { Box, Chip, IconButton, Paper, Typography } from '@mui/material'
+import { Box, Button, ButtonGroup, Chip, IconButton, Paper, Typography } from '@mui/material'
 import { styled } from '@mui/system';
 import {theme} from '../theme'
 
@@ -26,34 +26,40 @@ const IconBoxOverlay = styled(Box)(({ theme }) => ({
     left: 0,
     background: 'linear-gradient(0deg, rgba(218, 91, 0, 0.4), rgba(3, 215, 88, 0.3)), #ffffffaa',
     backgroundSize: 'cover',
-    zIndex: 3,
+    zIndex: 5,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     transition: 'all 0.5s ease',
-    cursor: 'pointer',
+    // cursor: 'pointer',
     '&:hover': {
         opacity: 1
     }
 }));
 
-const AppIconItem = ({name, image, height}) => {
+const AppIconItem = ({details}) => {
     return (
         <IconBoxHolder elevation={3} theme={theme}>
             <IconBoxOverlay>
-                <IconButton>
-                    <Chip avatar={<AndroidOutlined />} label="Download" variant="filled" color="success" />
-                </IconButton>
-                <IconButton>
-                    <Chip avatar={<InfoIcon color='primary' />} label="Info" variant="filled" color="info" />
-                </IconButton>
+                <ButtonGroup variant="contained" 
+                    size="small"
+                    aria-label="outlined button group">
+                    <Button 
+                        startIcon={<AndroidOutlined />} 
+                        color="success"
+                        href={details.link} target="_blank">Download</Button>
+                    <Button 
+                        startIcon={<InfoIcon />} 
+                        color="info" 
+                        href={`/apps/${details.page}`}>Info</Button>
+                </ButtonGroup>
             </IconBoxOverlay>
-            <img src={image}
-                alt={name}
+            <img src={details.image}
+                alt={details.title}
                 loading="lazy"
-                height={height} />
+                height={details.height} />
             <Typography gutterBottom variant="h6" component="div">
-                {name}
+                {details.title}
             </Typography>
         </IconBoxHolder>
     )
