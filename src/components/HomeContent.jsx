@@ -5,13 +5,13 @@ import CloudIcon from '@mui/icons-material/Cloud';
 
 const MainText = styled(Stack)(() => ({
   marginTop:'200px',
-  marginLeft:'50px'
+  marginLeft:'5%'
 }));
 
 const HomeContent = () => {
   return (
     <Box
-      paddingLeft={1}
+      paddingLeft={0}
       flex={5}
       sx={{ height: '100vh' }}>
 
@@ -38,7 +38,7 @@ const HomeContent = () => {
         </Typography>
 
         <br />
-        <Typography variant='span' sx={{ width: '500px' }}>
+        <Typography variant='span' sx={{ width: '100%', maxWidth: '500px', fontSize: {xs : "22px", sm : "18px"} }}>
           I’m a software engineer specializing in building web applications.
           Currently, I’m focused on building AWS based products at ?
         </Typography>

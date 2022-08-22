@@ -24,8 +24,9 @@ const Sidebar = () => {
       sx={{
         display: {
           xs: "none",
-          sm: "block",
-        }
+          sm: "none",
+          md: "block",
+        },
       }}>
       <Box position='fixed'
         sx={{

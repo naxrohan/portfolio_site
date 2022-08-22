@@ -10,7 +10,7 @@ const HomePage = () => {
     <Box 
       bgcolor={"background.default"} 
       color={"text.primary"}>
-      <Stack direction='row' spacing={3} justifyContent='space-between'>
+      <Stack direction='row' spacing={1} justifyContent='space-between'>
         <Sidebar />
         <HomeContent />
       </Stack>
