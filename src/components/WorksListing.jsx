@@ -4,10 +4,9 @@ import React from 'react'
 import LanguageIcon from '@mui/icons-material/Language';
 import CodeIcon from '@mui/icons-material/Code';
 import InfoIcon from '@mui/icons-material/Info';
-import { theme } from '../theme'
 import WorksData from '../JsonData/WorksData'
 
-const MainBody = styled(Stack)(({ theme }) => ({
+const MainBody = styled(Stack)(() => ({
   marginTop: '50px'
 }));
 
@@ -20,7 +19,6 @@ const WorksListing = () => {
       sx={{ height: '100vh', overflow:'scroll'}}>
 
       <MainBody
-        theme={theme}
         direction='row'
         spacing={0}
         justifyContent='space-evenly'

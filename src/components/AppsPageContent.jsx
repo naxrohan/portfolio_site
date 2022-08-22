@@ -3,7 +3,6 @@ import React from 'react'
 import { useParams } from 'react-router-dom';
 import AppIconItem from '../components/AppIconItem';
 import AppsData from '../JsonData/AppsData';
-import {theme} from '../theme'
 
 const AppsPageContent = () => {
     const param = useParams();
@@ -11,7 +10,7 @@ const AppsPageContent = () => {
         return item.page === param.appName;
     });
 
-    const MainBody = styled(Stack)(({ theme }) => ({
+    const MainBody = styled(Stack)(() => ({
         marginTop: '50px',
     }));
     const AppDescBody = styled(Box)(() => ({
@@ -27,7 +26,6 @@ const AppsPageContent = () => {
             flex={5}
             sx={{ height: '100vh', overflow: 'scroll' }}>
             <MainBody
-                theme={theme}
                 spacing={0}
                 justifyContent='left'
                 sx={{ flexDirection: { xs :"column", sm: "column", md: "row"} }}>

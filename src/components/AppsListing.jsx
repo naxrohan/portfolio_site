@@ -1,11 +1,10 @@
 import { Box } from '@mui/material'
 import {  Stack, styled } from '@mui/system';
 import React from 'react'
-import {theme} from '../theme'
 import AppIconItem from './AppIconItem';
 import AppsData from '../JsonData/AppsData';
 
-const MainBody = styled(Stack)(({theme}) => ({
+const MainBody = styled(Stack)(() => ({
   marginTop:'50px'
 }));
 
@@ -17,7 +16,6 @@ const AppsListing = () => {
       sx={{ height: '100vh', overflow: 'scroll' }}>
 
       <MainBody 
-        theme={theme}
         direction='row' 
         spacing={0} 
         justifyContent='space-evenly'

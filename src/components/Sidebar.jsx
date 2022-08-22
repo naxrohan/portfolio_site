@@ -22,6 +22,8 @@ const Sidebar = () => {
   return (
     <Box
       flex={1}
+      bgcolor={"background.default"}
+      color={"text.primary"}
       sx={{
         display: {
           xs: "none",
@@ -40,8 +42,8 @@ const Sidebar = () => {
           sx={{
             width: '100%',
             maxWidth: 360,
-            bgcolor: 'background.paper',
-            color: 'text.secondary',
+            bgcolor: 'background.default',
+            color: 'text.primary',
             paddingLeft: '20px'
           }}
           component="nav">
@@ -70,12 +72,12 @@ const Sidebar = () => {
           {PagesData.map((item) =>(
             <>
               <ListItem key={item.id} disablePadding>
-                <ListItemButton>
+                <ListItemButton >
                   <ListItemIcon>
                     {item.image}
                   </ListItemIcon>
-                  <Link to={item.page} style={{  textDecoration: 'none' }}>
-                    <ListItemText primary={item.title} />
+                  <Link to={item.page} style={{  textDecoration: 'none', color: "white" }} >
+                    <ListItemText primary={item.title}/>
                   </Link>
                 </ListItemButton>
               </ListItem>

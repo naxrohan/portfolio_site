@@ -3,10 +3,9 @@ import { AndroidOutlined } from '@mui/icons-material';
 import InfoIcon from '@mui/icons-material/Info';
 import { Box, Button, ButtonGroup, Paper, Typography } from '@mui/material'
 import { styled } from '@mui/system';
-import {theme} from '../theme'
 
 
-const IconBoxHolder = styled(Paper)(({ theme }) => ({
+const IconBoxHolder = styled(Paper)(() => ({
     width: '300px',
     height: '300px',
     marginBottom: '15px',
@@ -56,7 +55,7 @@ const AppIconItem = ({details, overlay}) => {
     </ButtonGroup>;
 
     return (
-        <IconBoxHolder elevation={3} theme={theme}>
+        <IconBoxHolder elevation={3}>
             <IconBoxOverlay displayoverlay={overlay}>
                 {AllButtons}
             </IconBoxOverlay>
