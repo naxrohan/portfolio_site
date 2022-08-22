@@ -39,13 +39,16 @@ const IconBoxOverlay = styled(Box)((props) => ({
 }));
 
 const AppIconItem = ({details, overlay}) => {
-    const Buttons = <ButtonGroup variant="contained" 
+    const DownloadButton = <Button 
+        startIcon={<AndroidOutlined />} 
+        color="success"
+        variant="contained" 
+        href={details.link} 
+        target="_blank">Download</Button>
+    const AllButtons = <ButtonGroup variant="contained" 
         size="small"
         aria-label="outlined button group">
-        <Button 
-            startIcon={<AndroidOutlined />} 
-            color="success"
-            href={details.link} target="_blank">Download</Button>
+            {DownloadButton}
         <Button 
             startIcon={<InfoIcon />} 
             color="info" 
@@ -55,7 +58,7 @@ const AppIconItem = ({details, overlay}) => {
     return (
         <IconBoxHolder elevation={3} theme={theme}>
             <IconBoxOverlay displayoverlay={overlay}>
-                {Buttons}
+                {AllButtons}
             </IconBoxOverlay>
             <img src={details.image}
                 alt={details.title}
@@ -64,6 +67,7 @@ const AppIconItem = ({details, overlay}) => {
             <Typography gutterBottom variant="h6" component="div">
                 {details.title}
             </Typography>
+            { overlay ==="hidden" ? DownloadButton : ""}
         </IconBoxHolder>
     )
 }
