@@ -1,14 +1,15 @@
 import { Avatar, Box, Button, ButtonGroup, Divider, List, ListItem, ListItemAvatar, ListItemButton, ListItemIcon, ListItemText, Stack, Typography } from '@mui/material'
 import React from 'react'
-import Home from '@mui/icons-material/Home';
-import AppsIcon from '@mui/icons-material/Apps';
 import { styled } from '@mui/system';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import Home from '@mui/icons-material/Home';
+import AppsIcon from '@mui/icons-material/Apps';
 import AndroidIcon from '@mui/icons-material/Android';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
 import { Link } from 'react-router-dom';
+import PagesData from '../JsonData/PagesData'
 
 const UserBox = styled("div")(({ theme }) => ({
   display: 'flex',
@@ -66,54 +67,21 @@ const Sidebar = () => {
           </ListItem>
           <Divider variant="inset" component="li" />
 
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Home />
-              </ListItemIcon>
-              <Link to={'/'} style={{  textDecoration: 'none' }}>
-                <ListItemText primary="Home" />
-              </Link>
-            </ListItemButton>
-          </ListItem>
-          <Divider variant="inset" component="li" />
-
-          <ListItem disablePadding>
-            <ListItemButton>
-
-              <ListItemIcon>
-                <AndroidIcon />
-              </ListItemIcon>
-              <Link to={'/apps'} style={{  textDecoration: 'none' }}>
-                <ListItemText primary="Apps" />
-              </Link>
-            </ListItemButton>
-          </ListItem>
-          <Divider variant="inset" component="li" />
-
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AppsIcon />
-              </ListItemIcon>
-              <Link to={'/my-work'} style={{  textDecoration: 'none' }}>
-                <ListItemText primary="My Work" />
-              </Link>
-            </ListItemButton>
-          </ListItem>
-          <Divider variant="inset" component="li" />
-
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <RssFeedIcon />
-              </ListItemIcon>
-              <Link to={'/blog'} style={{  textDecoration: 'none' }}>
-                <ListItemText primary="Blog" />
-              </Link>
-            </ListItemButton>
-          </ListItem>
-          <Divider variant="inset" component="li" />
+          {PagesData.map((item) =>(
+            <>
+              <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {item.image}
+                </ListItemIcon>
+                <Link to={item.page} style={{  textDecoration: 'none' }}>
+                  <ListItemText primary={item.title} />
+                </Link>
+              </ListItemButton>
+            </ListItem>
+            <Divider variant="inset" component="li" />
+            </>
+          ))}
 
         </List>
 
