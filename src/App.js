@@ -20,6 +20,8 @@ function App() {
         <Route path="/apps/:appName" element={<AppsPage />} />
         
         <Route path="/my-work" element={<MyWork />} />
+        <Route path="/my-work/:workName" element={<MyWork />} />
+        
         <Route path="/blog" element={<Blog />} />
       </Routes>
     </Router>
