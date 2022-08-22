@@ -26,6 +26,7 @@ const AppsListing = () => {
         { AppsData.map((item, key) => 
             <AppIconItem
               key={key}
+              overlay="visible"
               details={item} />  )
         }
 

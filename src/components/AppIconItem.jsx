@@ -17,7 +17,7 @@ const IconBoxHolder = styled(Paper)(({ theme }) => ({
     position: 'relative'
 }));
 
-const IconBoxOverlay = styled(Box)(({ theme }) => ({
+const IconBoxOverlay = styled(Box)((props) => ({
     opacity: 0,
     height: '100%',
     width: '100%',
@@ -31,28 +31,31 @@ const IconBoxOverlay = styled(Box)(({ theme }) => ({
     alignItems: 'center',
     justifyContent: 'center',
     transition: 'all 0.5s ease',
-    // cursor: 'pointer',
     '&:hover': {
         opacity: 1
-    }
+    },
+    visibility: props.displayoverlay
+    
 }));
 
-const AppIconItem = ({details}) => {
+const AppIconItem = ({details, overlay}) => {
+    const Buttons = <ButtonGroup variant="contained" 
+        size="small"
+        aria-label="outlined button group">
+        <Button 
+            startIcon={<AndroidOutlined />} 
+            color="success"
+            href={details.link} target="_blank">Download</Button>
+        <Button 
+            startIcon={<InfoIcon />} 
+            color="info" 
+            href={`/apps/${details.page}`}>Info</Button>
+    </ButtonGroup>;
+
     return (
         <IconBoxHolder elevation={3} theme={theme}>
-            <IconBoxOverlay>
-                <ButtonGroup variant="contained" 
-                    size="small"
-                    aria-label="outlined button group">
-                    <Button 
-                        startIcon={<AndroidOutlined />} 
-                        color="success"
-                        href={details.link} target="_blank">Download</Button>
-                    <Button 
-                        startIcon={<InfoIcon />} 
-                        color="info" 
-                        href={`/apps/${details.page}`}>Info</Button>
-                </ButtonGroup>
+            <IconBoxOverlay displayoverlay={overlay}>
+                {Buttons}
             </IconBoxOverlay>
             <img src={details.image}
                 alt={details.title}
