@@ -2,6 +2,7 @@ import { Box } from '@mui/material'
 import { Stack } from '@mui/system'
 import React from 'react'
 import Sidebar from '../components/Sidebar'
+import WorksListing from '../components/WorksListing'
 
 const MyWork = () => {
   return (
@@ -10,10 +11,7 @@ const MyWork = () => {
       color={"text.primary"}>
       <Stack direction='row' spacing={3} justifyContent='space-between'>
         <Sidebar />
-        <Box>
-        
-            Show a large Slider containeing cards.. as items
-        </Box>
+        <WorksListing />
       </Stack>
     </Box>
   )
