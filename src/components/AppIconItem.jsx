@@ -1,7 +1,7 @@
 import React from 'react'
 import { AndroidOutlined } from '@mui/icons-material';
 import InfoIcon from '@mui/icons-material/Info';
-import { Box, Button, ButtonGroup, Chip, IconButton, Paper, Typography } from '@mui/material'
+import { Box, Button, ButtonGroup, Paper, Typography } from '@mui/material'
 import { styled } from '@mui/system';
 import {theme} from '../theme'
 

@@ -3,7 +3,7 @@ import { Box } from '@mui/system'
 import React from 'react'
 import CloudIcon from '@mui/icons-material/Cloud';
 
-const MainText = styled(Stack)(({}) => ({
+const MainText = styled(Stack)(() => ({
   marginTop:'200px',
   marginLeft:'50px'
 }));
@@ -13,7 +13,7 @@ const HomeContent = () => {
     <Box
       paddingLeft={1}
       flex={5}
-      sx={{ borderLeft: "1px solid gray", height: '100vh' }}>
+      sx={{ height: '100vh' }}>
 
       <MainText direction='column' spacing={3} justifyContent='space-between'>
         <Typography variant='h6'>

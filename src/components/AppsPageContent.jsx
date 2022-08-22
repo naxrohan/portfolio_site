@@ -4,12 +4,11 @@ import { useParams } from 'react-router-dom';
 import AppIconItem from '../components/AppIconItem';
 import AppsData from '../JsonData/AppsData';
 import {theme} from '../theme'
-import PageBreadCrumb from '../components/PageBreadCrumb';
 
 const AppsPageContent = () => {
     const param = useParams();
     const AppDetails = AppsData.filter(item => {
-        return item.page == param.appName;
+        return item.page === param.appName;
     });
 
     const MainBody = styled(Stack)(({ theme }) => ({

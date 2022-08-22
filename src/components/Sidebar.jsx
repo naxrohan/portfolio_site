@@ -2,9 +2,7 @@ import { Avatar, Box, Button, ButtonGroup, Divider, List, ListItem, ListItemAvat
 import React from 'react'
 import Home from '@mui/icons-material/Home';
 import AppsIcon from '@mui/icons-material/Apps';
-import InfoIcon from '@mui/icons-material/Info';
 import { styled } from '@mui/system';
-import theme from "../theme"
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';

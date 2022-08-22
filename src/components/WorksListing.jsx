@@ -17,7 +17,7 @@ const WorksListing = () => {
       paddingLeft={5}
       paddingRight={5}
       flex={5}
-      sx={{ borderLeft: "0.1px solid lightgray", height: '100vh', overflow:'scroll'}}>
+      sx={{ height: '100vh', overflow:'scroll'}}>
 
       <MainBody
         theme={theme}
@@ -32,7 +32,7 @@ const WorksListing = () => {
           key={key}
           sx={{ margin: '5px 0px 5px 0px', maxWidth: '600px',  minHeight: '200px' }} 
           elevation={4} >
-          {item.image != "" ? 
+          {item.image !== "" ? 
           <CardMedia
               component="img"
               height="140"
