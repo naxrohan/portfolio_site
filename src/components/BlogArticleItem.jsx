@@ -38,7 +38,9 @@ const BlogArticleItem = ({ type, jsonData }) => {
                 <Typography variant="body2" color="text.secondary">
                     {postCat.length > 0 
                     ? postCat.map((item, key) => (
-                        <><Chip key={(key+1)*bid} label={item.__cdata} size="small"/>&nbsp;</>
+                        <React.Fragment key={(key+1)*bid}>
+                            <Chip label={item.__cdata} size="small"/>&nbsp;
+                        </React.Fragment>
                     ))
                     : ""}
                 </Typography>
@@ -53,14 +55,14 @@ const BlogArticleItem = ({ type, jsonData }) => {
                     justifyContent:"space-between", 
                     margin: "0 50px 0 50px" }}>
                { (type === "short") ?
-                <>
+                <React.Fragment>
                     <IconButton aria-label="share">
                         <ShareIcon />
                     </IconButton>
                     <Button variant="outlined" endIcon={<SendIcon />} href={`/blog/${jsonData.wp_post_name}`}>
                         Read
                     </Button>
-                </>
+                </React.Fragment>
                 : "" }
             </CardActions>
             {(type === "full") ?

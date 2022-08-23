@@ -70,8 +70,8 @@ const Sidebar = () => {
           <Divider variant="inset" component="li" />
 
           {PagesData.map((item) =>(
-            <>
-              <ListItem key={item.id} disablePadding>
+            <React.Fragment key={item.id}>
+              <ListItem  disablePadding>
                 <ListItemButton >
                   <ListItemIcon>
                     {item.image}
@@ -81,8 +81,8 @@ const Sidebar = () => {
                   </Link>
                 </ListItemButton>
               </ListItem>
-            <Divider key={item*2} variant="inset" component="li" />
-            </>
+              <Divider variant="inset" component="li" />
+            </React.Fragment>
           ))}
 
         </List>
