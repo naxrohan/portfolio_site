@@ -20,6 +20,8 @@ const AppsPageContent = () => {
         lineHeight: '20px'
     }));
 
+    const DescriptionText = AppDetails[0].desc.split("\n");
+
     return (
         <Box
             paddingLeft={0.1}
@@ -35,9 +37,11 @@ const AppsPageContent = () => {
                     details={AppDetails[0]} />
 
                 <AppDescBody>
-                    <Typography variant="h5" gutterBottom>
-                        {AppDetails[0].desc}
-                    </Typography>
+                    {DescriptionText.map((item) => (
+                        <Typography variant="h5" gutterBottom>
+                            {item}
+                        </Typography>
+                    ))}
                 </AppDescBody>
 
             </MainBody>

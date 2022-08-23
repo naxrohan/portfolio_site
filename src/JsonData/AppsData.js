@@ -13,7 +13,7 @@ const AppsData = [
         image: "/images/ic_hindi.png", 
         link: "https://play.google.com/store/apps/details?id=com.naxr.bible.hindi",
         page: "hindi-bible", 
-        desc: "Hindi Bible is 100% Offline & Free. Now enjoy a full feature Hindi Bible App at you finger tips.\n Enjoy reading with features like Night Mode and variable Font Size.With the inbuilt Notes you can take personal notes.And also use the Hindi Bible Widget to View the Bookmarked or Favorite Verses on the Go.So that you can view the work of God on the no matter the Time or Place you are in.Download the App Now !!" ,
+        desc: "Hindi Bible is 100% Offline & Free.\n Now enjoy a full feature Hindi Bible App at you finger tips.\n Enjoy reading with features like Night Mode and variable Font Size. \nWith the inbuilt Notes you can take personal notes. \nAnd also use the Hindi Bible Widget to View the Bookmarked or Favorite Verses on the Go. \nSo that you can view the work of God on the no matter the Time or Place you are in. \nDownload the App Now !!" ,
         height: "280"
     },
     { 
@@ -21,7 +21,7 @@ const AppsData = [
         image: "/images/ic_marathi.png", 
         link: "https://play.google.com/store/apps/details?id=com.naxr.bible.marathi" ,
         page: "marathi-bible", 
-        desc: "Marathi Bible is 100% Offline & Free. Now enjoy a full feature Marathi Bible App at you finger tips. \n Enjoy reading with features like Night Mode and variable Font Size.With the inbuilt Notes you can take personal notes.And also use the Marathi Bible Widget to View the Bookmarked or Favorite Verses on the Go.So that you can view the work of God on the no matter the Time or Place you are in.Download the App Now !! \n \n Recomended Keyboard for Search: [Google Hindi / Marathi Input]" ,
+        desc: "Marathi Bible is 100% Offline & Free.\n Now enjoy a full feature Marathi Bible App at you finger tips. \n Enjoy reading with features like Night Mode and variable Font Size. \nWith the inbuilt Notes you can take personal notes. \nAnd also use the Marathi Bible Widget to View the Bookmarked or Favorite Verses on the Go.\nSo that you can view the work of God on the no matter the Time or Place you are in.Download the App Now !! \n \n Recomended Keyboard for Search: [Google Hindi / Marathi Input]" ,
         height: "280"
     },
     { 
@@ -29,7 +29,7 @@ const AppsData = [
         image: "/images/ic_konkani.png", 
         link: "https://play.google.com/store/apps/details?id=com.naxr.bible.kon" ,
         page: "konkani-bible", 
-        desc: "Konkani Bible (Povitri Pustok) is 100% Offline & Free. Now enjoy a full feature Konkani Bible (Povitri Pustok) App at you finger tips. \n Enjoy reading with features like Night Mode and variable Font Size.With the inbuilt Notes you can take personal notes.And also use the Konkani Bible(Povitri Pustok) Widget to View the Bookmarked or Favorite Verses on the Go.So that you can view the work of God on the no matter the Time or Place you are in.Download the App Now !! \n Note: \n 1) This Bible is a copy of \"Povitr Pustok Revised - 2010\" widely ready by Konkani speaking people. \n 2) This App is Beta release, kindly provide feedback at developer email id for any crashes or missing content related issues." ,
+        desc: "Konkani Bible (Povitri Pustok) is 100% Offline & Free. \nNow enjoy a full feature Konkani Bible (Povitri Pustok) App at you finger tips. \n Enjoy reading with features like Night Mode and variable Font Size.\nWith the inbuilt Notes you can take personal notes.\nAnd also use the Konkani Bible(Povitri Pustok) Widget to View the Bookmarked or Favorite Verses on the Go.\nSo that you can view the work of God on the no matter the Time or Place you are in.Download the App Now !! \n Note: \n 1) This Bible is a copy of \"Povitr Pustok Revised - 2010\" widely ready by Konkani speaking people. \n 2) This App is Beta release, kindly provide feedback at developer email id for any crashes or missing content related issues." ,
         height: "280"
     },
     { 
@@ -37,7 +37,7 @@ const AppsData = [
         image: "/images/ic_kjv.png", 
         link: "https://play.google.com/store/apps/details?id=com.naxr.bible.row" ,
         page: "kjv-bible", 
-        desc: "Bible [KJV] is 100% Offline & Free. Now enjoy a full feature Bible [KJV] App at you finger tips.Enjoy reading with features like Night Mode and variable Font Size.With the inbuilt Notes you can take personal notes.And also use the Bible [KJV] Widget to View the Bookmarked or Favorite Verses on the Go.So that you can view the work of God on the no matter the Time or Place you are in.Download the App Now !!" ,
+        desc: "Bible [KJV] is 100% Offline & Free.\n Now enjoy a full feature Bible [KJV] App at you finger tips.\nEnjoy reading with features like Night Mode and variable Font Size.\nWith the inbuilt Notes you can take personal notes.And also use the Bible [KJV] Widget to View the Bookmarked or Favorite Verses on the Go.\nSo that you can view the work of God on the no matter the Time or Place you are in.\nDownload the App Now !!" ,
         height: "280"
     },
     { 
