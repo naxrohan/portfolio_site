@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { ExpandMore } from '@mui/icons-material';
-import { Avatar, Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Collapse, IconButton, Typography } from '@mui/material';
+import React from 'react'
+import { Avatar, Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Typography } from '@mui/material';
 import { red } from '@mui/material/colors';
 import ShareIcon from '@mui/icons-material/Share';
 import SendIcon from '@mui/icons-material/Send';
@@ -20,6 +19,9 @@ const BlogArticleItem = ({ type, data }) => {
                         R
                     </Avatar>
                 }
+                action={
+                    type === "full" ? <IconButton aria-label="share"><ShareIcon /></IconButton> : ""
+                }
                 title="Shrimp and Chorizo Paella"
                 subheader="September 14, 2016"
             />
@@ -36,15 +38,23 @@ const BlogArticleItem = ({ type, data }) => {
                     if you like.
                 </Typography>
             </CardContent>
-            <CardActions disableSpacing>
-                <IconButton aria-label="share">
-                    <ShareIcon />
-                </IconButton>
-                <Button variant="outlined" endIcon={<SendIcon />} href={`/blog/how-to-use-docker`}>
-                    Read
-                </Button>
+            <CardActions sx={{ 
+                    display: "flex", 
+                    alignItems:"center", 
+                    justifyContent:"space-between", 
+                    margin: "0 50px 0 50px" }}>
+               { (type === "short") ?
+                <>
+                    <IconButton aria-label="share">
+                        <ShareIcon />
+                    </IconButton>
+                    <Button variant="outlined" endIcon={<SendIcon />} href={`/blog/how-to-use-docker`}>
+                        Read
+                    </Button>
+                </>
+                : "" }
             </CardActions>
-            {(type == "full") ?
+            {(type === "full") ?
                 <Box >
                     <CardContent>
                         <Typography paragraph>Method:</Typography>
