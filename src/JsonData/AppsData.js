@@ -5,7 +5,7 @@ const AppsData = [
         image: "/images/ic_birthday.png", 
         link: "https://play.google.com/store/apps/details?id=com.naxr.wa.sticker",
         page: "birthday-stickers", 
-        desc: "WhatsApp BirthDay Stickers" ,
+        desc: "This App contains WAStickerApps Stickers...\n- Happy Birthday Wishes\n- Real Birthday Cake Stickers\n- Cartoon Number Stickers\n- Number Stickers\n- Candles & Anniversary Sticker\n- Gift Stickers" ,
         height: "250"
     },
     { 
@@ -45,7 +45,7 @@ const AppsData = [
         image: "/images/ic_parable_english.png", 
         link: "https://play.google.com/store/apps/details?id=com.naxr.bible.story" ,
         page: "bible-parables-english", 
-        desc: "This is a app containing 4 parables told by Jesus & 1 Old Testament Story. \n1. Lost Sheep \n 2. Prodical Son \n 3. The Sower \n4. The Good Samaritan \n 5. Elijah and the Widow at Zarephath" ,
+        desc: "Bible Parables\nBible Parables app contains all the Parables of Jesus taken from the Gospels.\nThey are available in English (Text/Audio) format for listening and reading.\nFeatures include :\n- Audio Narrative\n- Night Mode\n- Font size & style setting" ,
         height: "280"
     },
     { 
@@ -53,7 +53,7 @@ const AppsData = [
         image: "/images/ic_parable_hindi.png", 
         link: "https://play.google.com/store/apps/details?id=com.naxr.bible.pbhi" ,
         page: "bible-parables-hindi", 
-        desc: "This is a app containing 4 parables told by Jesus & 1 Old Testament Story. \n1. Lost Sheep \n 2. Prodical Son \n 3. The Sower \n4. The Good Samaritan \n 5. Elijah and the Widow at Zarephath" ,
+        desc: "Bible Parables\nBible Parables app contains Parables of Jesus taken from the Gospel.\nThey are available in Hindi (Text/Audio) format for listening and reading.\nFeatures include :\n- Audio Narrative\n- Night Mode\n- Font size & style setting\n________________________________________________\nयेसु मसीह के दृष्टांत\nबाइबिल दृष्टांत एप्लिकेशन में सुसमाचार से लिया गया यीशु का दृष्टांत शामिल है।\nवे सुनने और पढ़ने के लिए हिंदी (पाठ / ऑडियो) प्रारूप में उपलब्ध हैं।\nविशेषताओं में शामिल :\n- ऑडियो कथा\n- डार्क थीम\n- फ़ॉन्ट आकार और शैली सेटिंग" ,
         height: "280"
     },
     { 
@@ -61,7 +61,7 @@ const AppsData = [
         image: "/images/ic_parable_portuguese.png", 
         link: "https://play.google.com/store/apps/details?id=com.naxr.bible.pbpt" ,
         page: "bible-parables-portuguese", 
-        desc: "This is a app containing 4 parables told by Jesus & 1 Old Testament Story. \n1. Lost Sheep \n 2. Prodical Son \n 3. The Sower \n4. The Good Samaritan \n 5. Elijah and the Widow at Zarephath" ,
+        desc: "Parábolas de Jesus\n\nO Aplicativo Parábolas de Jesus contém parábolas de Jesus tiradas dos Evangelhos.\nEles estão disponíveis em formato Inglês (Texto / Áudio) para ouvir e ler.\n\nCaracterísticas incluem :\n- Narrativa de Áudio\n- Modo noturno\n- Tamanho da fonte e configuração de estilo" ,
         height: "280"
     },
     { 
@@ -69,7 +69,7 @@ const AppsData = [
         image: "/images/ic_parable_spanish.png", 
         link: "https://play.google.com/store/apps/details?id=com.naxr.bible.pbes" ,
         page: "bible-parables-spanish", 
-        desc: "This is a app containing 4 parables told by Jesus & 1 Old Testament Story. \n1. Lost Sheep \n 2. Prodical Son \n 3. The Sower \n4. The Good Samaritan \n 5. Elijah and the Widow at Zarephath" ,
+        desc: "Parábolas de Jesus | Español\n\nLa aplicación Parábolas de Jesus | Español contiene parábolas de Jesús tomadas de los evangelios.\nEstán disponibles en formato inglés (texto/audio) para escuchar y leer.\n\nLas características incluyen:\n- Narrativa de audio\n- Modo nocturno\n- Tamaño de fuente y configuración de estilo" ,
         height: "280"
     },
     {
@@ -77,7 +77,7 @@ const AppsData = [
         image: "/images/ic_worldproverbs.png", 
         link: "https://play.google.com/store/apps/details?id=global.proverbs.naxr.com.worldproverbs", 
         page: "world-proverbs", 
-        desc: "World Proverbs",
+        desc: "World Proverbs contains compilation of Proverbs from various countries.\n\nAfrican\nIndian\nBritish\nAmerican\nNative American\nChinese\nPersian\nAlbanian... and more to come...",
         height: "280"
     }
 
