@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Sidebar from '../components/Sidebar'
 import { Box, createTheme, Stack, ThemeProvider } from '@mui/material'
+import BlogListing from '../components/BlogListing';
+import ResponsiveAppBar from '../components/ResponsiveAppBar';
 
 
 const Blog = () => {
@@ -15,17 +17,10 @@ const Blog = () => {
       <Box 
         bgcolor={"background.default"} 
         color={"text.primary"}>
+          <ResponsiveAppBar />
         <Stack direction='row' spacing={3} justifyContent='space-between'>
           <Sidebar />
-          <Box
-            bgcolor={"background.default"} 
-            color={"text.primary"}
-            paddingLeft={5}
-            paddingRight={5}
-            flex={5}
-            sx={{ height: '100vh', overflow:'scroll'}}>
-              Blog
-          </Box>
+          <BlogListing />
         </Stack>
       </Box>
     </ThemeProvider>
