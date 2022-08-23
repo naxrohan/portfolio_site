@@ -2,6 +2,7 @@ import MyApps from "./pages/MyApps";
 import HomePage from "./pages/HomePage";
 import MyWork from "./pages/MyWork";
 import Blog from "./pages/Blog";
+import BlogsPage from "./pages/BlogsPage";
 import AppsPage from "./pages/AppsPage"
 import {
   BrowserRouter as Router,
@@ -20,6 +21,7 @@ function App() {
           <Route path="/my-work" element={<MyWork />} />
           <Route path="/my-work/:workName" element={<MyWork />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:articleName" element={<BlogsPage />} />
         </Routes>
       </Router>
   );
