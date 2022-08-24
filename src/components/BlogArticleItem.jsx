@@ -4,6 +4,7 @@ import { red } from '@mui/material/colors';
 import ShareIcon from '@mui/icons-material/Share';
 import SendIcon from '@mui/icons-material/Send';
 import Moment from "moment"
+import { Helmet } from 'react-helmet';
 
 /**
  * 
@@ -74,6 +75,13 @@ const BlogArticleItem = ({ type, jsonData }) => {
                     </CardContent>
                 </Box>
                 : ""}
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <meta name="description" content={`naxrohan.github.io  | ${jsonData.description.substring(0, 100)}`} />
+                <title>naxrohan.github.io | Blog Post -- {jsonData.title}</title>
+                <link rel="canonical" href={`https://naxrohan.github.io/blog/${jsonData.wp_post_name}`} />
+            </Helmet>
         </Card>
     )
 }

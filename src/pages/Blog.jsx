@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar'
 import { Box, createTheme, Stack, ThemeProvider } from '@mui/material'
 import BlogListing from '../components/BlogListing';
 import ResponsiveAppBar from '../components/ResponsiveAppBar';
+import { Helmet } from 'react-helmet';
 
 
 const Blog = () => {
@@ -22,6 +23,12 @@ const Blog = () => {
           <Sidebar />
           <BlogListing />
         </Stack>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta name="description" content="naxrohan.github.io  | Blog Post Listing Page" />
+          <title>naxrohan.github.io | Blog Page</title>
+          <link rel="canonical" href="https://naxrohan.github.io/blog/" />
+        </Helmet>
       </Box>
     </ThemeProvider>
   )

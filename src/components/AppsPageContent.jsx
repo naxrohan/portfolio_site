@@ -1,5 +1,6 @@
 import { Box, Stack, styled, Typography } from '@mui/material';
 import React from 'react'
+import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 import AppIconItem from '../components/AppIconItem';
 import AppsData from '../JsonData/AppsData';
@@ -45,6 +46,12 @@ const AppsPageContent = () => {
                 </AppDescBody>
 
             </MainBody>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <meta name="description" content={`naxrohan.github.io  | ${AppDetails[0].desc.substring(0, 100)}`} />
+                <title>naxrohan.github.io | ClayApps -- {AppDetails[0].title}</title>
+                <link rel="canonical" href={`https://naxrohan.github.io/apps/${param.appName}`} />
+            </Helmet>
         </Box>
     )
 }
