@@ -15,6 +15,18 @@ const HomeContent = () => {
       flex={5}
       sx={{ height: '100vh' }}>
 
+        <Box
+        component="img"
+        sx={{
+          marginTop:'10px',
+          marginLeft:'5%',
+          height: { xs: '20vh', sm: '35vh', md: '45vh' },
+          width: { xs: '85vw', sm: '85vw', md: '70vw' },
+        }}
+        alt="home page banner Image."
+        src="images/homebg3.png"
+      />
+
       <MainText direction='column' spacing={3} justifyContent='space-between'>
         <Typography variant='h6'>
           Hi there 👋 I'm
