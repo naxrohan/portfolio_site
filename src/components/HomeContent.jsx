@@ -2,9 +2,10 @@ import { Avatar, Button, Chip, Stack, styled, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import CloudIcon from '@mui/icons-material/Cloud';
+import FooterIcons from './FooterIcons';
 
 const MainText = styled(Stack)(() => ({
-  marginTop:'200px',
+  marginTop:'10px',
   marginLeft:'5%'
 }));
 
@@ -55,8 +56,11 @@ const HomeContent = () => {
           Currently, I’m focused on building AWS based products at ?
         </Typography>
 
-        <Button variant="contained" sx={{ width: '150px' }}>My Work</Button>
+        <Button variant="contained" sx={{ width: '150px' }} href={`/my-work`}>My Work</Button>
+        
       </MainText>
+      
+      <FooterIcons />
 
     </Box>
   )

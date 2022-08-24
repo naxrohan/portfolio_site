@@ -1,15 +1,13 @@
-import { Avatar, Box, Button, ButtonGroup, Divider, List, ListItem, ListItemAvatar, ListItemButton, ListItemIcon, ListItemText, Stack, Typography } from '@mui/material'
+import { Avatar, Box, Divider, List, ListItem, ListItemAvatar, ListItemButton, ListItemIcon, ListItemText, ListSubheader, Stack, Typography } from '@mui/material'
 import React from 'react'
 import { styled } from '@mui/system';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import Home from '@mui/icons-material/Home';
 import AppsIcon from '@mui/icons-material/Apps';
 import AndroidIcon from '@mui/icons-material/Android';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
 import { Link } from 'react-router-dom';
 import PagesData from '../JsonData/PagesData'
+import FooterIcons from './FooterIcons';
 
 const UserBox = styled("div")(({ theme }) => ({
   display: 'flex',
@@ -47,7 +45,6 @@ const Sidebar = () => {
             paddingLeft: '20px'
           }}
           component="nav">
-
           <ListItem key="12312312" disablePadding>
             <ListItemAvatar>
               <UserBox>
@@ -86,23 +83,7 @@ const Sidebar = () => {
           ))}
 
         </List>
-
-        <Stack
-          direction='row'
-          justifyContent='center'
-          sx={{ marginBottom: '10px' }}>
-          <ButtonGroup variant="text" aria-label="text button group">
-            <Button>
-              <LinkedInIcon />
-            </Button>
-            <Button>
-              <GitHubIcon />
-            </Button>
-            <Button>
-              <AlternateEmailIcon />
-            </Button>
-          </ButtonGroup>
-        </Stack>
+        <FooterIcons type="sidebar" />
       </Box>
     </Box>
   )
