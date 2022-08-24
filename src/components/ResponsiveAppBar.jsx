@@ -92,7 +92,7 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            Rohan DSouza
+            ClayApps
           </Typography>
 
           <Box sx={{ flexGrow: 0 }}>
