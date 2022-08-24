@@ -9,24 +9,28 @@ const PagesData = [
         title: "Home",
         image: <Home />, 
         page: "/", 
+        canonical_url : "https://naxrohan.github.io/"
     },
     {
         id: 2,
         title: "Apps",
         image: <AndroidIcon />, 
         page: "/apps", 
+        canonical_url : "https://naxrohan.github.io/apps"
     },
     {
         id: 3,
         title: "My Work",
         image: <AppsIcon />, 
         page: "/my-work", 
+        canonical_url : "https://naxrohan.github.io/my-work"
     },
     {
         id: 4,
         title: "Blog",
         image: <RssFeedIcon />, 
         page: "/blog", 
+        canonical_url : "https://naxrohan.github.io/blog"
     },
 ];
 
