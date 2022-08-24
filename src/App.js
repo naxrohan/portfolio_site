@@ -4,6 +4,7 @@ import MyWork from "./pages/MyWork";
 import Blog from "./pages/Blog";
 import BlogsPage from "./pages/BlogsPage";
 import AppsPage from "./pages/AppsPage"
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import {
   BrowserRouter as Router,
   Route,
@@ -22,6 +23,7 @@ function App() {
           <Route path="/my-work/:workName" element={<MyWork />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:articleName" element={<BlogsPage />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </Router>
   );
