@@ -4,10 +4,6 @@
 name: Node.js CI
 env: 
   CI: false
-  user_name: 'github-actions[bot]'
-  user_email: 'github-actions[bot]@users.noreply.github.com'
-  github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-  repository: ${{ github.repository }}
 on:
   push:
     branches: [ "master" ]
@@ -45,6 +41,11 @@ jobs:
       run: npm run build
     
     - name: Deploy
+      env:
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+        repository: ${{ github.repository }}
       run: |
         git config --global user.name $user_name
         git config --global user.email $user_email
