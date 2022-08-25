@@ -11,10 +11,10 @@
 - Blog
     - Blog post pages
 - Privacy Policy Page.
+- meta tags integration using helmet
 
 ### Todo:
 - Admin for Project | Apps & Blog. 
-- meta tags integration using helmet
 - blog category page
 - blog category filter
 - filter by post date/year
