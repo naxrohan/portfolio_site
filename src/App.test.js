@@ -1,9 +1,9 @@
 import React from 'react'
 import {render, screen, fireEvent, waitFor} from "@testing-library/react"
-import App from '../App';
-import AppsData from '../JsonData/AppsData';
-import WorksData from '../JsonData/WorksData';
-import BlogData from "../JsonData/BlogData"
+import App from './App';
+import AppsData from './JsonData/AppsData';
+import WorksData from './JsonData/WorksData';
+import BlogData from "./JsonData/BlogData"
 
 
 test('should sidebar renders the header', () => {
