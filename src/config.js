@@ -7,6 +7,10 @@ const configs = {
     "development": {
         siteURL: "http://localhost:3000",
         subFolder: "",
+    },
+    "test": {
+        siteURL: "http://localhost:3000",
+        subFolder: "",
     }
 };
 
