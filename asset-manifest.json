@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/portfolio_site/static/js/main.ddf48cab.js",
+    "index.html": "/portfolio_site/index.html",
+    "main.ddf48cab.js.map": "/portfolio_site/static/js/main.ddf48cab.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ddf48cab.js"
+  ]
+}
