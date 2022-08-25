@@ -10,10 +10,10 @@
 - My Works/Projects
 - Blog
     - Blog post pages
+- Privacy Policy Page.
 
 ### Todo:
 - Admin for Project | Apps & Blog. 
-- Privacy Policy Page.
 - meta tags integration using helmet
 - blog category page
 - blog category filter
