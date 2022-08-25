@@ -16,6 +16,7 @@ const AppsListing = () => {
       sx={{ height: '100vh', overflow: 'scroll' }}>
 
       <MainBody 
+        role="appsListing"
         direction='row' 
         spacing={0} 
         justifyContent='space-evenly'

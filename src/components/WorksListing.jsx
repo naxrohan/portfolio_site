@@ -27,6 +27,7 @@ const WorksListing = () => {
       {
         WorksData.map( (item, key) => (
         <Card 
+          role="workItems"
           key={key}
           sx={{ margin: '5px 0px 5px 0px', maxWidth: '600px',  minHeight: '200px' }} 
           elevation={4} >

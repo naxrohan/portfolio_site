@@ -58,9 +58,7 @@ const Sidebar = () => {
                   sx={{ display: 'inline' }}
                   component="span"
                   variant="body2"
-                  color="text.primary">
-                  Fullstack developer
-                </Typography>
+                  color="text.primary">Fullstack Developer</Typography>
               } />
 
           </ListItem>

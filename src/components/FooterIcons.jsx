@@ -16,16 +16,16 @@ const FooterIcons = ({type}) => {
             sx={{ display: (type === "sidebar") ? "flex" : { xs: "flex", sm : "flex", md : "none" } }}
             >
             <ButtonGroup variant="text" aria-label="text button group">
-                <Button>
+                <Button role="instafollow">
                     <InstagramIcon />
                 </Button>
-                <Button>
+                <Button role="linkinFollow">
                     <LinkedInIcon />
                 </Button>
-                <Button>
+                <Button role="gitFollow">
                     <GitHubIcon />
                 </Button>
-                <Button>
+                <Button role="emailFollow">
                     <AlternateEmailIcon />
                 </Button>
             </ButtonGroup>

@@ -16,7 +16,7 @@ const BlogArticleItem = ({ type, jsonData }) => {
     const bid = parseInt(jsonData.wp_post_id);
     const postCat = jsonData.category.length > 0 ?  jsonData.category : [];
     return (
-        <Card >
+        <Card role="blogItem">
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
