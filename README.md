@@ -19,3 +19,5 @@
 - blog category filter
 - filter by post date/year
 - show only recent 10 posts
+- simple test cases
+- S# integration ?
