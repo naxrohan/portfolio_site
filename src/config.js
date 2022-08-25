@@ -1,5 +1,5 @@
 
-const siteconfigs = {
+const configs = {
     "production" : {
         siteURL: "https://naxrohan.github.io",
         subFolder: "/portfolio_site",
@@ -10,4 +10,9 @@ const siteconfigs = {
     }
 };
 
-export default siteconfigs[process.env.NODE_ENV];
+console.log(process.env.NODE_ENV);
+
+const siteconfigs = configs[process.env.NODE_ENV] !== undefined ?
+     configs[process.env.NODE_ENV] : configs["production"]
+
+export default siteconfigs;
