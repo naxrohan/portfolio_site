@@ -8,8 +8,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import {
   BrowserRouter as Router,
   Route,
-  Routes,
-  Navigate
+  Routes
 } from "react-router-dom"
 
 function App() {

@@ -13,8 +13,6 @@ import MenuItem from '@mui/material/MenuItem';
 import PagesData from '../JsonData/PagesData'
 import { Link } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

@@ -12,7 +12,7 @@ const BlogsPage = () => {
   const param = useParams();
   const [mode, setMode] = useState("dark");
   const [BlogItems, setBlogItems] = useState(BlogData.rss.channel.item);
-  const [BlogCategories, setBlogCategories] = useState(BlogData.rss.channel.tags);
+  // const [BlogCategories, setBlogCategories] = useState(BlogData.rss.channel.tags);
   
   const BlogPostDetails = BlogItems.filter(item => {
       return item.wp_post_name === param.articleName;

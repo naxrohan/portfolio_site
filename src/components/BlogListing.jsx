@@ -11,11 +11,11 @@ const MainBody = styled(Stack)(() => ({
 const BlogListing = () => { 
     
     const [BlogItems, setBlogItems] = useState(BlogData.rss.channel.item);
-    const [BlogCategories, setBlogCategories] = useState(BlogData.rss.channel.tags);
+    //const [BlogCategories, setBlogCategories] = useState(BlogData.rss.channel.tags);
 
     useEffect(()=>{
         setBlogItems(BlogData.rss.channel.item);
-        setBlogCategories(BlogData.rss.channel.tags);
+        //setBlogCategories(BlogData.rss.channel.tags);
     },[]);
 
     return (

@@ -1,6 +1,7 @@
 {
   "name": "my_react_port",
   "version": "0.1.0",
+  "homepage": "https://naxrohan.github.io/portfolio_site",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.0",
