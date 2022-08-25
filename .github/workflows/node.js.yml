@@ -26,11 +26,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
+    
+    # removed to ignore prod cong warning as error
+    # - run: npm ci
 
     - name: Test Cases
-    - run: npm test
-    
+      run: npm test
+
     - name: Build
       run: npm run build
     
