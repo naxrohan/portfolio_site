@@ -61,6 +61,7 @@ const AppIconItem = ({details, overlay}) => {
             </IconBoxOverlay>
             <img src={details.image}
                 alt={details.title}
+                role="appsItems"
                 loading="lazy"
                 height={details.height} />
             <Typography gutterBottom variant="h6" component="div">

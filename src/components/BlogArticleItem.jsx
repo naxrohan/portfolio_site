@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Divider, IconButton, Typography } from '@mui/material';
+import { Avatar, Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, IconButton, Typography } from '@mui/material';
 import { red } from '@mui/material/colors';
 import ShareIcon from '@mui/icons-material/Share';
 import SendIcon from '@mui/icons-material/Send';
@@ -16,7 +16,7 @@ const BlogArticleItem = ({ type, jsonData }) => {
     const bid = parseInt(jsonData.wp_post_id);
     const postCat = jsonData.category.length > 0 ?  jsonData.category : [];
     return (
-        <Card >
+        <Card role="blogItem">
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">

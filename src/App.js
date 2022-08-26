@@ -8,13 +8,13 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import {
   BrowserRouter as Router,
   Route,
-  Routes,
-  Navigate
+  Routes
 } from "react-router-dom"
+import siteconfigs from "./config"
 
 function App() {
   return (
-      <Router>
+      <Router basename={siteconfigs.subFolder}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/apps" element={<MyApps />} />
