@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import PagesData from '../JsonData/PagesData'
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 
 const ResponsiveAppBar = () => {
@@ -67,7 +67,7 @@ const ResponsiveAppBar = () => {
             >
               {PagesData.map((page, key) => (
                 <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                    <Link to={page.page} style={{  textDecoration: 'none', color: "white"  }}>
+                    <Link href={page.page} style={{  textDecoration: 'none', color: "white"  }}>
                         <Typography textAlign="center">{page.title}</Typography>
                     </Link>
                 </MenuItem>

@@ -1,14 +1,16 @@
 import { Box, Stack, styled, Typography } from '@mui/material';
 import React from 'react'
-import { Helmet } from 'react-helmet';
-import { useParams } from 'react-router-dom';
 import AppIconItem from '../components/AppIconItem';
 import AppsData from '../JsonData/AppsData';
+import MetaTag from './MetaTags';
+import { useRouter } from 'next/router';
 
 const AppsPageContent = () => {
-    const param = useParams();
+    const router = useRouter()
+    const { slug } = router.query;
+
     const AppDetails = AppsData.filter(item => {
-        return item.page === param.appName;
+        return item.page === slug;
     });
 
     const MainBody = styled(Stack)(() => ({
@@ -46,12 +48,11 @@ const AppsPageContent = () => {
                 </AppDescBody>
 
             </MainBody>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <meta name="description" content={`naxrohan.github.io  | ${AppDetails[0].desc.substring(0, 100)}`} />
-                <title>naxrohan.github.io | ClayApps -- {AppDetails[0].title}</title>
-                <link rel="canonical" href={`https://naxrohan.github.io/apps/${param.appName}`} />
-            </Helmet>
+            <MetaTag
+                description={AppDetails[0].desc.substring(0, 100)}
+                title={AppDetails[0].title}
+                siteTitle="naxrohan.github.io | ClayApps"
+                canonicalURL={`https://naxrohan.github.io/apps/${slug}`} />
         </Box>
     )
 }

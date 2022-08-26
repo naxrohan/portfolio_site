@@ -4,7 +4,8 @@ import { red } from '@mui/material/colors';
 import ShareIcon from '@mui/icons-material/Share';
 import SendIcon from '@mui/icons-material/Send';
 import Moment from "moment"
-import { Helmet } from 'react-helmet';
+import MetaTag from "./MetaTags"
+import Link from 'next/link';
 
 /**
  * 
@@ -60,9 +61,11 @@ const BlogArticleItem = ({ type, jsonData }) => {
                     <IconButton aria-label="share">
                         <ShareIcon />
                     </IconButton>
-                    <Button variant="outlined" endIcon={<SendIcon />} href={`/blog/${jsonData.wp_post_name}`}>
-                        Read
-                    </Button>
+                    <Link href={{ pathname : "/blog/[slug]", query: { slug: jsonData.wp_post_name} }}>
+                        <Button variant="outlined" endIcon={<SendIcon />} >
+                            Read
+                        </Button>
+                    </Link>
                 </React.Fragment>
                 : "" }
             </CardActions>
@@ -76,12 +79,11 @@ const BlogArticleItem = ({ type, jsonData }) => {
                 </Box>
                 : ""}
 
-            <Helmet>
-                <meta charSet="utf-8" />
-                <meta name="description" content={`naxrohan.github.io  | ${jsonData.description.substring(0, 100)}`} />
-                <title>naxrohan.github.io | Blog Post -- {jsonData.title}</title>
-                <link rel="canonical" href={`https://naxrohan.github.io/blog/${jsonData.wp_post_name}`} />
-            </Helmet>
+            <MetaTag
+                description={jsonData.description.substring(0, 100)}
+                title={jsonData.title}
+                siteTitle="naxrohan.github.io | ClayApps"
+                canonicalURL={`https://naxrohan.github.io/blog/${jsonData.wp_post_name}`} />
         </Card>
     )
 }

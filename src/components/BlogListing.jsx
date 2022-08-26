@@ -26,13 +26,12 @@ const BlogListing = () => {
             sx={{ height: '100vh', overflowY: 'scroll', paddingLeft: { xs : 5, md: 10}, paddingRight: { xs : 5, md: 10} }}>
         
             <MainBody spacing={2} justifyContent='space-evenly'>
-                {/* <BlogArticleItem type="short" /> */}
                 {BlogItems.map((item, key) => (
                     //item !== undefined &&
                         <BlogArticleItem 
-                        key={key}
-                        type="short" 
-                        jsonData={item} />
+                            key={key}
+                            type="short" 
+                            jsonData={item} />
                 ))}
             </MainBody>
         

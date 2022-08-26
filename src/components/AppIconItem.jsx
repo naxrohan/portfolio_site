@@ -3,6 +3,7 @@ import { AndroidOutlined } from '@mui/icons-material';
 import InfoIcon from '@mui/icons-material/Info';
 import { Box, Button, ButtonGroup, Paper, Typography } from '@mui/material'
 import { styled } from '@mui/system';
+import Link from 'next/link';
 
 
 const IconBoxHolder = styled(Paper)(() => ({
@@ -48,10 +49,11 @@ const AppIconItem = ({details, overlay}) => {
         size="small"
         aria-label="outlined button group">
             {DownloadButton}
-        <Button 
-            startIcon={<InfoIcon />} 
-            color="info" 
-            href={`/apps/${details.page}`}>Info</Button>
+        <Link href={{ 
+                pathname: "/apps/[slug]", 
+                query: {slug: details.page} }}>
+            <Button startIcon={<InfoIcon />} color="info">Info</Button>
+        </Link>
     </ButtonGroup>;
 
     return (

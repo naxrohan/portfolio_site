@@ -1,9 +1,9 @@
 import { Box, createTheme, Stack, ThemeProvider } from '@mui/material'
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet'
-import ResponsiveAppBar from '../components/ResponsiveAppBar'
-import Sidebar from '../components/Sidebar'
-import WorksListing from '../components/WorksListing'
+import ResponsiveAppBar from '../../components/ResponsiveAppBar'
+import Sidebar from '../../components/Sidebar'
+import WorksListing from '../../components/WorksListing'
+import MetaTag from "../../components/MetaTags"
 
 const MyWork = () => {
   const [mode, setMode] = useState("dark");
@@ -21,12 +21,12 @@ const MyWork = () => {
         <Stack direction='row' spacing={3} justifyContent='space-between'>
           <Sidebar />
           <WorksListing />
-          <Helmet>
-            <meta charSet="utf-8" />
-            <meta name="description" content="naxrohan.github.io  | My Works and Projects Listing page" />
-            <title>naxrohan.github.io | My Works Page</title>
-            <link rel="canonical" href="https://naxrohan.github.io/my-work/" />
-          </Helmet>
+          
+          <MetaTag
+            description="naxrohan.github.io  | My Works and Projects Listing page"
+            title="My Works Page"
+            siteTitle="naxrohan.github.io | ClayApps"
+            canonicalURL={`https://naxrohan.github.io/my-work/`} />
         </Stack>
       </Box>
     </ThemeProvider>

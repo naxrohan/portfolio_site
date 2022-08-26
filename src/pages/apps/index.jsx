@@ -1,9 +1,9 @@
 import { Box, createTheme, Stack, ThemeProvider } from '@mui/material'
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet'
-import AppsListing from '../components/AppsListing'
-import ResponsiveAppBar from '../components/ResponsiveAppBar'
-import Sidebar from '../components/Sidebar'
+import AppsListing from '../../components/AppsListing'
+import ResponsiveAppBar from '../../components/ResponsiveAppBar'
+import Sidebar from '../../components/Sidebar'
+import MetaTag from "../../components/MetaTags"
 
 const MyApps = () => {
   const [mode, setMode] = useState("dark");
@@ -23,12 +23,11 @@ const MyApps = () => {
         <Sidebar />
         <AppsListing />
       </Stack>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <meta name="description" content="naxrohan.github.io  | MyApps Listing Page for all Android Apps created by ClayApps" />
-          <title>naxrohan.github.io | MyApps Page</title>
-          <link rel="canonical" href="https://naxrohan.github.io/apps/" />
-        </Helmet>
+        <MetaTag
+          description="naxrohan.github.io  | MyApps Listing Page for all Android Apps created by ClayApps"
+          title="MyApps Page"
+          siteTitle="naxrohan.github.io | ClayApps"
+          canonicalURL={`https://naxrohan.github.io/apps`} />
     </Box>
         </ThemeProvider>
   )

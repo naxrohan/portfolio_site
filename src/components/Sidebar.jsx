@@ -5,7 +5,7 @@ import Home from '@mui/icons-material/Home';
 import AppsIcon from '@mui/icons-material/Apps';
 import AndroidIcon from '@mui/icons-material/Android';
 import RssFeedIcon from '@mui/icons-material/RssFeed';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import PagesData from '../JsonData/PagesData'
 import FooterIcons from './FooterIcons';
 
@@ -71,7 +71,7 @@ const Sidebar = () => {
                   <ListItemIcon>
                     {item.image}
                   </ListItemIcon>
-                  <Link to={item.page} style={{  textDecoration: 'none', color: "white" }} >
+                  <Link href={item.page} style={{  textDecoration: 'none', color: "white" }} >
                     <ListItemText primary={item.title}/>
                   </Link>
                 </ListItemButton>
