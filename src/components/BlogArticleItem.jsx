@@ -6,6 +6,7 @@ import SendIcon from '@mui/icons-material/Send';
 import Moment from "moment"
 import MetaTag from "./MetaTags"
 import Link from 'next/link';
+import ReactMarkdown from 'react-markdown'
 
 /**
  * 
@@ -72,8 +73,10 @@ const BlogArticleItem = ({ type, blogData }) => {
             {(type === "full") ?
                 <Box >
                     <CardContent>
-                        <Typography paragraph
-                            dangerouslySetInnerHTML={{ __html: blogData.content }}>
+                        <Typography paragraph>
+                            <ReactMarkdown>
+                                {blogData.content}
+                            </ReactMarkdown>
                         </Typography>
                     </CardContent>
                 </Box>
