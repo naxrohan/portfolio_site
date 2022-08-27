@@ -32,6 +32,13 @@ const PagesData = [
         page: "/blog", 
         canonical_url : "https://naxrohan.github.io/blog"
     },
+    {
+        id: 5,
+        title: "Posts",
+        image: <RssFeedIcon />, 
+        page: "/posts", 
+        canonical_url : "https://naxrohan.github.io/posts"
+    },
 ];
 
 export default PagesData;
