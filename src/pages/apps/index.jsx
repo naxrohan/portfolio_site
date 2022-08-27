@@ -4,8 +4,9 @@ import AppsListing from '../../components/AppsListing'
 import ResponsiveAppBar from '../../components/ResponsiveAppBar'
 import Sidebar from '../../components/Sidebar'
 import MetaTag from "../../components/MetaTags"
+import { getAllApps } from '../../utils/appsapi'
 
-const MyApps = () => {
+const MyApps = ({allApps}) => {
   const [mode, setMode] = useState("dark");
   const darkTheme = createTheme({
     palette: {
@@ -21,7 +22,8 @@ const MyApps = () => {
         <ResponsiveAppBar />
       <Stack direction='row' spacing={3} justifyContent='space-between'>
         <Sidebar />
-        <AppsListing />
+        <AppsListing
+          allAppsData={allApps} />
       </Stack>
         <MetaTag
           description="naxrohan.github.io  | MyApps Listing Page for all Android Apps created by ClayApps"
@@ -34,3 +36,11 @@ const MyApps = () => {
 }
 
 export default MyApps
+
+export const getStaticProps = async () => {
+  const allApps = getAllApps();
+
+  return {
+    props: { allApps },
+  }
+}

@@ -1,17 +1,17 @@
 import { Box, Stack, styled, Typography } from '@mui/material';
 import React from 'react'
 import AppIconItem from '../components/AppIconItem';
-import AppsData from '../JsonData/AppsData';
+// import AppsData from '../JsonData/AppsData';
 import MetaTag from './MetaTags';
 import { useRouter } from 'next/router';
 
-const AppsPageContent = () => {
+const AppsPageContent = ({appDescribe}) => {
     const router = useRouter()
     const { slug } = router.query;
 
-    const AppDetails = AppsData.filter(item => {
-        return item.page === slug;
-    });
+    // const AppDetails = AppsData.filter(item => {
+    //     return item.page === slug;
+    // });
 
     const MainBody = styled(Stack)(() => ({
         marginTop: '50px',
@@ -23,7 +23,7 @@ const AppsPageContent = () => {
         lineHeight: '20px'
     }));
 
-    const DescriptionText = AppDetails[0].desc.split("\n");
+    const DescriptionText = appDescribe[0].desc.split("\n");
 
     return (
         <Box
@@ -37,11 +37,11 @@ const AppsPageContent = () => {
 
                 <AppIconItem
                     overlay="hidden"
-                    details={AppDetails[0]} />
+                    details={appDescribe[0]} />
 
                 <AppDescBody>
-                    {DescriptionText.map((item) => (
-                        <Typography variant="h5" gutterBottom>
+                    {DescriptionText.map((item, key) => (
+                        <Typography key={key} variant="h5" gutterBottom>
                             {item}
                         </Typography>
                     ))}
@@ -49,8 +49,8 @@ const AppsPageContent = () => {
 
             </MainBody>
             <MetaTag
-                description={AppDetails[0].desc.substring(0, 100)}
-                title={AppDetails[0].title}
+                description={appDescribe[0].desc.substring(0, 100)}
+                title={appDescribe[0].title}
                 siteTitle="naxrohan.github.io | ClayApps"
                 canonicalURL={`https://naxrohan.github.io/apps/${slug}`} />
         </Box>
