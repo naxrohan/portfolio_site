@@ -15,8 +15,8 @@ import ReactMarkdown from 'react-markdown'
  * @returns
  */
 const BlogArticleItem = ({ type, blogData }) => {    
-    // const bid = parseInt(blogData.wp_post_id);
-    // const postCat = blogData.category.length > 0 ?  blogData.category : [];
+    const bid = parseInt(Math.random(1111, 99999));
+    const postCat = blogData.category.length > 0 ?  blogData.category : [];
     return (
         <Card role="blogItem">
             <CardHeader
@@ -39,13 +39,13 @@ const BlogArticleItem = ({ type, blogData }) => {
             />
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                    {/* {postCat.length > 0 
+                    {postCat.length > 0 
                     ? postCat.map((item, key) => (
                         <React.Fragment key={(key+1)*bid}>
-                            <Chip label={item.__cdata} size="small"/>&nbsp;
+                            <Chip label={item} size="small"/>&nbsp;
                         </React.Fragment>
                     ))
-                    : ""} */}
+                    : ""}
                 </Typography>
                 <br />
                 <Typography variant="body2" color="text.secondary">
@@ -73,7 +73,7 @@ const BlogArticleItem = ({ type, blogData }) => {
             {(type === "full") ?
                 <Box >
                     <CardContent>
-                        <Typography paragraph>
+                        <Typography component={"div"}>
                             <ReactMarkdown>
                                 {blogData.content}
                             </ReactMarkdown>
