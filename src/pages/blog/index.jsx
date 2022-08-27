@@ -15,15 +15,6 @@ const index = ({allPosts}) => {
     }
   });
   return (
-    <ul>
-      {allPosts.map((item)=> 
-        <li>
-        <Link href={{ pathname: "/blog/[slug]", query: {slug: item.slug} }}>
-          {item.title}
-        </Link>  
-        </li>
-      )}
-    </ul>,
     <ThemeProvider theme={darkTheme}>
     <Box 
       bgcolor={"background.default"} 

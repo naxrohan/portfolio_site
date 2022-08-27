@@ -12,5 +12,14 @@ category:
   - FirstPost
 ---
 
-Thanks for joining me! <blockquote>Good company in a journey makes the way seem shorter. — Izaak Walton</blockquote><img class="wp-image-7 size-full" src="https://headstartdata.files.wordpress.com/2018/02/post.png" alt="post" width="1000" height="563" />
+### Thanks for joining me! 
 
+&nbsp;
+&nbsp;
+
+*Good company in a journey makes the way seem shorter. — Izaak Walton* 
+
+&nbsp;
+&nbsp;
+
+![alt_text](https://headstartdata.files.wordpress.com/2018/02/post.png)
