@@ -61,7 +61,7 @@ const BlogArticleItem = ({ type, blogData }) => {
                     <IconButton aria-label="share">
                         <ShareIcon />
                     </IconButton>
-                    <Link href={{ pathname: "/posts/[slug]", query: {slug: blogData.slug} }}>
+                    <Link href={{ pathname: "/blog/[slug]", query: {slug: blogData.slug} }}>
                         <Button variant="outlined" endIcon={<SendIcon />} >
                             Read
                         </Button>
