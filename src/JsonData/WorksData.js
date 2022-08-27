@@ -33,6 +33,14 @@ const WorksData = [
         page: "employee-management", 
         desc: "Parables App (Android/SQLite)",
         height: "280"
+    },
+    {
+        title: "Portfolio website (NextJS - ReactJS & Markdown based blog)",
+        image: "", 
+        link: "https://naxrohan.github.io/", 
+        page: "portfolio-website", 
+        desc: "Parables App (Android/SQLite)",
+        height: "280"
     }
 ];
 
