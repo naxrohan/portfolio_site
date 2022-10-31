@@ -26,7 +26,7 @@ const PagesData = [
         canonical_url : "https://naxrohan.github.io/my-work"
     },
     {
-        id: 4,
+        id: 5,
         title: "Blog",
         image: <RssFeedIcon />, 
         page: "/blog", 
