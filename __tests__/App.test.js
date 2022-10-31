@@ -3,9 +3,9 @@ import {render, screen, fireEvent, waitFor} from "@testing-library/react"
 import HomePage from '../src/pages/index';
 import AppsData from '../src/JsonData/AppsData';
 import WorksData from '../src/JsonData/WorksData';
-import BlogData from "../src/JsonData/BlogData"
 
-
+/**
+ *
 test('should sidebar renders the header', () => {
   render(<HomePage />);
   const sideHeaderEle = screen.getByText(/rohan dsouza/i);
@@ -34,20 +34,20 @@ test('should sidebar render footer Icons', () => {
 
 test('should sidebar renders Home page links', async() => {
   render(<HomePage />);
-  const menuButtonEle = screen.getAllByText(/home/i);
-  expect(menuButtonEle.length).toBe(2);
+  const menuButtonEle = screen.getAllByRole('navButtons');
+  
+  // expect(menuButtonEle).toBeInTheDocument();
   const homeContent = screen.getByText(/rohan jones dsouza/i);
 
   // check main body render
-  fireEvent.click(menuButtonEle[0]);
+  fireEvent.click(menuButtonEle[1]);
 
   await waitFor(() => 
       expect(homeContent.innerHTML).toBe("Rohan Jones DSouza")
    );
 });
 
-/**
- *
+
  // check one item on apps listing page
 test('should atleast one item render on apps listing page', async() => {
   render(<HomePage />);

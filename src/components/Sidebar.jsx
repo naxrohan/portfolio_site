@@ -72,7 +72,7 @@ const Sidebar = () => {
                     {item.image}
                   </ListItemIcon>
                   <Link href={item.page} style={{  textDecoration: 'none', color: "white" }} >
-                    <ListItemText primary={item.title}/>
+                    <ListItemText role="navButtons" primary={item.title}/>
                   </Link>
                 </ListItemButton>
               </ListItem>
